@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario_para_Enviar_Correo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-content">
+        <h2> Enviar formulario </h2>
+        <!--en esta action del formulario implementa una API sencilla de un navegador gratuito llamado formsubmit-->
+        <form action="https://formsubmit.co/ortsos667@gmail.com" method="POST">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name">
+
+            <label for="email"> Correo Electronico</label>
+            <input type="email" name="email" id="email">
+
+            <label for="subject">Asunto</label>
+            <input type="text" name="subject" id="subject">
+
+            <label for="coments">Comentarios</label>
+            <textarea name="coments" id="coments" cols="30" rows="5"></textarea>
+
+            <input type="submit" class="btn" value="Enviar">
+
+            <!-- esta seccion es para que el formulario quede en su lugar y no aparesca un captcha -->
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html?name=&email=&subject=&coments=">
+
+            <input type="hidden" name="_captcha" value="false">
+
+        </form>
+    </div>
+
+</body>
+</html>
